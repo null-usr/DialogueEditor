@@ -1,0 +1,92 @@
+{
+	"nodes": [{
+			"name": "source",
+			"type": "source",
+			"color": "yellow"
+		},
+		{
+			"name": "default",
+			"type": "default"
+		},
+		{
+			"name": "output",
+			"type": "output"
+		},
+		{
+			"name": "base",
+			"type": "base"
+		},
+		{
+			"name": "Dialogue Node",
+			"type": "base",
+			"color": "#FFFFFF",
+			"fields": [{
+					"key": "characterName",
+					"type": "string",
+					"value": ""
+				},
+				{
+					"key": "dialogue",
+					"type": "text",
+					"value": ""
+				}
+			]
+		},
+		{
+			"name": "Branch",
+			"type": "group",
+			"color": "#FFFFFF",
+			"nodes": [{
+					"name": "Branch",
+					"type": "base",
+					"color": "#FFFFFF",
+					"position": [0, 0],
+					"fields": [{
+							"key": "characterName",
+							"type": "string",
+							"value": ""
+						},
+						{
+							"key": "dialogue",
+							"type": "text",
+							"value": ""
+						},
+						{
+							"key": "Yes",
+							"type": "data",
+							"value": "Yes"
+						},
+						{
+							"key": "No",
+							"type": "data",
+							"value": "No"
+						}
+					]
+				},
+				{
+					"name": "Yes",
+					"type": "base",
+					"color": "#FFFFFF",
+					"position": [550, -150]
+				},
+				{
+					"name": "No",
+					"type": "base",
+					"color": "#FFFFFF",
+					"position": [550, 150]
+				}
+			],
+			"edges": [{
+					"handle": "Yes",
+					"from": 0,
+					"to": 1
+				},
+				{
+					"handle": "No",
+					"from": 0,
+					"to": 2
+				}
+			]
+		}
+	]
+}
